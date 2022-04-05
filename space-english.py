@@ -1,9 +1,12 @@
 # Подключаем pygame
 import pygame
+from setup import *
+
+
 
 pygame.init()
 size = [WIDTH, HEIGHT]
-pygame.display.set_caption("Шаблон pygame")
+pygame.display.set_caption("Space English")
 scene = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
 
