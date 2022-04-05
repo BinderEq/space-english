@@ -7,7 +7,7 @@ pygame.display.set_caption("Шаблон pygame")
 scene = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
 
-# ГЛАВНЫЙ ЦИКЛ ИГРЫ
+# ГЛАВНЫЙ ЦИКЛ
 while (playGame):
     for event in pygame.event.get():
         if (event.type == pygame.QUIT):
