@@ -1,7 +1,7 @@
 # Подключаем pygame
 import pygame
 from setup import *
-
+from space_english_ship import Ship
 
 
 pygame.init()
@@ -9,6 +9,8 @@ size = [WIDTH, HEIGHT]
 pygame.display.set_caption("Space English")
 scene = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
+
+ship = Ship()
 
 # ГЛАВНЫЙ ЦИКЛ
 while (playGame):
@@ -19,17 +21,21 @@ while (playGame):
             if (event.key == pygame.K_ESCAPE):
                 playGame = False
             elif (event.key == pygame.K_LEFT):
-                print("ВЛЕВО")
+                ship.move_left()
             elif (event.key == pygame.K_RIGHT):
-                print("ВПРАВО")
+                ship.move_right()
             elif (event.key == pygame.K_UP):
                 print("ВВЕРХ")
             elif (event.key == pygame.K_DOWN):
                 print("ВНИЗ")
 
+    if (pygame.mouse.get_pos()[0] < ship.x):
+        ship.move_left()
+    elif (pygame.mouse.get_pos()[0] > ship.x + 64):
+        ship.move_right()
     # Очищаем сцену
     scene.fill(BLACK)
-
+    ship.draw(scene)
     # Отрисовываем изображения
     pygame.display.flip()
 
