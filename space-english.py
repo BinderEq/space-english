@@ -1,7 +1,6 @@
 # Подключаем pygame
-import pygame
 from setup import *
-from space_english_ship import Ship
+from model.ship import Ship
 
 
 pygame.init()
