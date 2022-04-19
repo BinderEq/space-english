@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/png/space_ship.png" beforeDir="false" afterPath="$PROJECT_DIR$/png/space_ship.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/rocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/rocket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ship.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space-english.py" beforeDir="false" afterPath="$PROJECT_DIR$/space-english.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +117,27 @@
       <option name="project" value="LOCAL" />
       <updated>1649776990894</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавил анимация развала корабля.">
+      <created>1650380763657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1650380763657</updated>
+    </task>
+    <task id="LOCAL-00005" summary="добавил анимация развала корабля.">
+      <created>1650380821232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1650380821232</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавил каталог и файл read.me." />
     <MESSAGE value="Добавил передвижение корабля." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил передвижение корабля." />
+    <MESSAGE value="добавил анимация развала корабля." />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил анимация развала корабля." />
   </component>
 </project>

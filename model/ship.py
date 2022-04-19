@@ -4,13 +4,21 @@ class Ship:
     def __init__(self):
         self.x = 218
         self.y = 500
-        self.skin = pygame.image.load('png/space_ship.png')
+        self.skin = [pygame.image.load('png/space_ship.png'),
+                     pygame.image.load('png/space_ship brick_01.png'),
+                     pygame.image.load('png/space_ship brick_02.png'),
+                     pygame.image.load('png/space_ship brick_03.png'),
+                     pygame.image.load('png/space_ship brick_04.png'),
+                     pygame.image.load('png/space_ship brick_05.png'),
+                     pygame.image.load('png/space_ship brick_06.png')]
+        self.frame = 0
+
 
     def draw(self, scene):
-        scene.blit(self.skin, (self.x, self.y))
+        scene.blit(self.skin[self.frame], (self.x, self.y))
 
-    def move_left(self):
-        self.x -= 5
+    def move_left(self, delta):
+        self.x -= 300 * delta
 
-    def move_right(self):
-        self.x += 5
+    def move_right(self, delta):
+        self.x += 300 * delta
