@@ -9,10 +9,9 @@ pygame.display.set_caption("Space English")
 scene = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
 
+frame = 0
 ship = Ship()
 rocket = []
-
-
 
 # ГЛАВНЫЙ ЦИКЛ
 while (playGame):
@@ -33,26 +32,37 @@ while (playGame):
         elif (event.type == pygame.MOUSEBUTTONDOWN):
             if (event.button == 1):
                 rocket.append(Rocket(ship.x, ship.y))
+            if (event.button == 3):
+                rocket.append(Rocket(ship.x + 64, ship.y))
 
     if (pygame.mouse.get_pos()[0] < ship.x):
         ship.move_left(deltatime)
     elif (pygame.mouse.get_pos()[0] > ship.x + 64):
         ship.move_right(deltatime)
+
     # Очищаем сцену
     scene.fill(BLACK)
+
     ship.draw(scene)
     for i in range(len(rocket)):
         rocket[i].draw(scene)
+
     # Отрисовываем изображения
     pygame.display.flip()
 
     # Расчёты:
     # ...
     for i in range(len(rocket)):
-        rocket[i].move(deltatime)
+        rocket[i].move(deltatime, frame)
 
     # Задержка для синхронизации FPS
+
+    frame += 1
+    if frame > 10000:
+        frame = 0
+
     deltatime = clock.tick(FPS) / 1000
+
 
 # Конец истории
 pygame.quit()
