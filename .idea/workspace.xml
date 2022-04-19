@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="Изображения 4х ракет.">
-      <change afterPath="$PROJECT_DIR$/png/rocket_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/png/rocket_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/png/rocket_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/png/rocket_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocket.py" afterDir="false" />
+    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/png/space_ship.png" beforeDir="false" afterPath="$PROJECT_DIR$/png/space_ship.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +33,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Python.space-english">
     <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -113,11 +107,19 @@
       <option name="project" value="LOCAL" />
       <updated>1649174409713</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил передвижение корабля.">
+      <created>1649776990894</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649776990894</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавил каталог и файл read.me." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил каталог и файл read.me." />
+    <MESSAGE value="Добавил передвижение корабля." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил передвижение корабля." />
   </component>
 </project>
