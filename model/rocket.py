@@ -14,6 +14,9 @@ class Rocket:
 
     def move(self, delta):
         self.y -= self.speed * delta
+        self.frame += 1
+        if (self.frame >= len(self.skin)):
+            self.frame = 0
 
     def draw(self, scene):
         scene.blit(self.skin[self.frame], (self.x, self.y))
