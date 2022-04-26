@@ -2,12 +2,17 @@
 from setup import *
 from model.ship import Ship
 from model.rocket import Rocket
+from model.background import Background
 
 pygame.init()
 size = [WIDTH, HEIGHT]
 pygame.display.set_caption("Space English")
 scene = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
+
+# Фоновый рисунок
+background01 = Background(0)
+background02 = Background(-HEIGHT)
 
 frame = 0
 ship = Ship()
@@ -43,6 +48,9 @@ while (playGame):
     # Очищаем сцену
     scene.fill(BLACK)
 
+    background01.draw(scene, ship.x)
+    background02.draw(scene, ship.x)
+
     ship.draw(scene)
     for i in range(len(rocket)):
         rocket[i].draw(scene)
@@ -55,12 +63,22 @@ while (playGame):
     for i in range(len(rocket)):
         rocket[i].move(deltatime, frame)
 
-    # Задержка для синхронизации FPS
+    background01.move(deltatime, HEIGHT)
+    background02.move(deltatime, HEIGHT)
 
+    # Удалем ракеты
+    if frame % 80 == 0:
+        for i in range(len(rocket) - 1, -1, -1):
+            if rocket[i].enabled == False:
+                del rocket[i]
+
+    # Количество кадров
     frame += 1
     if frame > 10000:
         frame = 0
 
+    # Задержка для синхронизации FPS
+    # Время, прошедшее между кадрами
     deltatime = clock.tick(FPS) / 1000
 
 
