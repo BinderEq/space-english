@@ -13,6 +13,6 @@ class Background:
         scene.blit(self.skin, (-self.skin_x / 6 - x / 4, self.y))
 
     def move(self, delta, height):
-        self.y += 300 * delta
+        self.y += 100 * delta
         if self.y >= height:
             self.y = -self.skin.get_height()

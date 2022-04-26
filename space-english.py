@@ -3,6 +3,8 @@ from setup import *
 from model.ship import Ship
 from model.rocket import Rocket
 from model.background import Background
+from model.meteor import Meteor
+from random import randint
 
 pygame.init()
 size = [WIDTH, HEIGHT]
@@ -17,6 +19,9 @@ background02 = Background(-HEIGHT)
 frame = 0
 ship = Ship()
 rocket = []
+
+meteor = []
+
 
 # ГЛАВНЫЙ ЦИКЛ
 while (playGame):
@@ -55,6 +60,8 @@ while (playGame):
     for i in range(len(rocket)):
         rocket[i].draw(scene)
 
+    for i in range(len(meteor)):
+        meteor[i].draw(scene)
     # Отрисовываем изображения
     pygame.display.flip()
 
@@ -63,14 +70,20 @@ while (playGame):
     for i in range(len(rocket)):
         rocket[i].move(deltatime, frame)
 
+    for i in range(len(meteor)):
+        meteor[i].move(deltatime, frame)
+
     background01.move(deltatime, HEIGHT)
     background02.move(deltatime, HEIGHT)
 
     # Удалем ракеты
-    if frame % 80 == 0:
+    if frame % 25 == 0:
         for i in range(len(rocket) - 1, -1, -1):
             if rocket[i].enabled == False:
                 del rocket[i]
+        if (randint(0, 100) < 30):
+            meteor.append(Meteor(randint(0, WIDTH), -40))
+
 
     # Количество кадров
     frame += 1
