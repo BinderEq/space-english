@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model/meteor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/background.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/rocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/rocket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/png/space_ship.png" beforeDir="false" afterPath="$PROJECT_DIR$/png/space_ship.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space-english.py" beforeDir="false" afterPath="$PROJECT_DIR$/space-english.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,27 +38,6 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="Python.space-english">
-    <configuration name="meteor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="space-english" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/meteor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="space-english" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,7 +83,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.space-english" />
-        <item itemvalue="Python.meteor" />
         <item itemvalue="Python.setup" />
       </list>
     </recent_temporary>
@@ -150,36 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650380821232</updated>
     </task>
-    <task id="LOCAL-00006" summary="Добавил ракеты.">
-      <created>1650383880900</created>
+    <task id="LOCAL-00006" summary="Добавлена вторая ракета, скорректирована скорость.">
+      <created>1650384421307</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1650383880900</updated>
+      <updated>1650384421307</updated>
     </task>
-    <task id="LOCAL-00007" summary="Добавил ракеты.">
-      <created>1650384046828</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1650384046828</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Изменил положение корабля и вылета второй ракеты.">
-      <created>1650985760752</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1650985760752</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавил каталог и файл read.me." />
     <MESSAGE value="Добавил передвижение корабля." />
     <MESSAGE value="добавил анимация развала корабля." />
-    <MESSAGE value="Добавил ракеты." />
-    <MESSAGE value="Изменил положение корабля и вылета второй ракеты." />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил положение корабля и вылета второй ракеты." />
+    <MESSAGE value="Добавлена вторая ракета, скорректирована скорость." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена вторая ракета, скорректирована скорость." />
   </component>
 </project>
