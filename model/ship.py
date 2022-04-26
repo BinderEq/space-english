@@ -3,7 +3,7 @@ import pygame
 class Ship:
     def __init__(self):
         self.x = 218
-        self.y = 500
+        self.y = 750
         self.skin = [pygame.image.load('png/space_ship.png'),
                      pygame.image.load('png/space_ship brick_01.png'),
                      pygame.image.load('png/space_ship brick_02.png'),

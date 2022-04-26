@@ -33,7 +33,7 @@ while (playGame):
             if (event.button == 1):
                 rocket.append(Rocket(ship.x, ship.y))
             if (event.button == 3):
-                rocket.append(Rocket(ship.x + 64, ship.y))
+                rocket.append(Rocket(ship.x + 48, ship.y))
 
     if (pygame.mouse.get_pos()[0] < ship.x):
         ship.move_left(deltatime)
