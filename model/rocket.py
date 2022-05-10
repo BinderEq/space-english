@@ -14,6 +14,12 @@ class Rocket:
                   pygame.image.load("png/rocket_02.png"),
                   pygame.image.load("png/rocket_03.png"),
                   pygame.image.load("png/rocket_04.png")]
+
+        # Изменение размера ракет
+        for i in range(len(self.skin)):
+            self.skin[i] = pygame.transform.scale(self.skin[i], (8, 16))
+
+
         self.frame = 0
 
     def move(self, delta, frame):

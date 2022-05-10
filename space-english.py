@@ -19,6 +19,7 @@ background02 = Background(-HEIGHT)
 frame = 0
 ship = Ship()
 rocket = []
+pause = False
 
 meteor = []
 
@@ -31,23 +32,25 @@ while (playGame):
         elif (event.type == pygame.KEYDOWN):
             if (event.key == pygame.K_ESCAPE):
                 playGame = False
-            elif (event.key == pygame.K_LEFT):
+            elif (event.key == pygame.K_LEFT and not pause):
                 ship.move_left(deltatime)
-            elif (event.key == pygame.K_RIGHT):
+            elif (event.key == pygame.K_RIGHT and not pause):
                 ship.move_right(deltatime)
             elif (event.key == pygame.K_UP):
                 print("ВВЕРХ")
             elif (event.key == pygame.K_DOWN):
                 print("ВНИЗ")
+            elif (event.key == pygame.K_i):
+                pause = not pause
         elif (event.type == pygame.MOUSEBUTTONDOWN):
-            if (event.button == 1):
+            if (event.button == 1 and not pause):
                 rocket.append(Rocket(ship.x, ship.y))
-            if (event.button == 3):
+            if (event.button == 3 and not pause):
                 rocket.append(Rocket(ship.x + 48, ship.y))
 
-    if (pygame.mouse.get_pos()[0] < ship.x):
+    if (pygame.mouse.get_pos()[0] < ship.x and not pause):
         ship.move_left(deltatime)
-    elif (pygame.mouse.get_pos()[0] > ship.x + 64):
+    elif (pygame.mouse.get_pos()[0] > ship.x + 64 and not pause):
         ship.move_right(deltatime)
 
     # Очищаем сцену
@@ -57,31 +60,35 @@ while (playGame):
     background02.draw(scene, ship.x)
 
     ship.draw(scene)
-    for i in range(len(rocket)):
-        rocket[i].draw(scene)
 
     for i in range(len(meteor)):
         meteor[i].draw(scene)
+
+    for i in range(len(rocket)):
+        rocket[i].draw(scene)
+
+
     # Отрисовываем изображения
     pygame.display.flip()
 
     # Расчёты:
     # ...
-    for i in range(len(rocket)):
-        rocket[i].move(deltatime, frame)
+    if not pause:
+        for i in range(len(rocket)):
+            rocket[i].move(deltatime, frame)
 
-    for i in range(len(meteor)):
-        meteor[i].move(deltatime, frame)
+        for i in range(len(meteor)):
+            meteor[i].move(deltatime, frame)
 
-    background01.move(deltatime, HEIGHT)
-    background02.move(deltatime, HEIGHT)
+        background01.move(deltatime, HEIGHT)
+        background02.move(deltatime, HEIGHT)
 
     # Удалем ракеты
     if frame % 25 == 0:
         for i in range(len(rocket) - 1, -1, -1):
             if rocket[i].enabled == False:
                 del rocket[i]
-        if (randint(0, 100) < 30):
+        if (randint(0, 100) < 30 and not pause):
             meteor.append(Meteor(randint(0, WIDTH), -40))
 
 
