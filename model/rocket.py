@@ -34,4 +34,5 @@ class Rocket:
                 self.frame = 0
 
     def draw(self, scene):
-        scene.blit(self.skin[self.frame], (self.x, self.y))
+        if (self.enabled):
+            scene.blit(self.skin[self.frame], (self.x, self.y))
