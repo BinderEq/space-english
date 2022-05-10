@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
+    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="Работа над попаданием и взрывами.">
+      <change afterPath="$PROJECT_DIR$/dict/dict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/explosions.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/explosions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/meteor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/meteor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/rocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/rocket.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,48 +35,6 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="Python.space-english">
-    <configuration name="background" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="space-english" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/background.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="explosions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="space-english" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/explosions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="space-english" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,8 +80,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.space-english" />
-        <item itemvalue="Python.explosions" />
-        <item itemvalue="Python.background" />
         <item itemvalue="Python.setup" />
       </list>
     </recent_temporary>
@@ -181,28 +135,63 @@
       <option name="project" value="LOCAL" />
       <updated>1650384421307</updated>
     </task>
-    <task id="LOCAL-00007" summary="Добавил взрыв.">
-      <created>1652195019659</created>
+    <task id="LOCAL-00007" summary="Добавлена вторая ракета, скорректирована скорость.">
+      <created>1650987818513</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1652195019659</updated>
+      <updated>1650987818513</updated>
     </task>
-    <task id="LOCAL-00008" summary="Добавил взрыв.">
-      <created>1652195110902</created>
+    <task id="LOCAL-00008" summary="Добавлена вторая ракета, скорректирована скорость.">
+      <created>1650987852274</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1652195110902</updated>
+      <updated>1650987852274</updated>
     </task>
-    <task id="LOCAL-00009" summary="Добавил взрыв.">
-      <created>1652197645538</created>
+    <task id="LOCAL-00009" summary="Реализована пауза и изменены размеры ракет.">
+      <created>1652195580938</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1652197645538</updated>
+      <updated>1652195580939</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Работа над попаданием и взрывами.">
+      <created>1652196742524</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1652196742524</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Работа над попаданием и взрывами.">
+      <created>1652197290855</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652197290855</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Работа над попаданием и взрывами.">
+      <created>1652197500020</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652197500020</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Взрывы бахают!">
+      <created>1652198821400</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652198821400</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Работа над попаданием и взрывами.">
+      <created>1652198943025</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652198943025</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -210,7 +199,9 @@
     <MESSAGE value="Добавил передвижение корабля." />
     <MESSAGE value="добавил анимация развала корабля." />
     <MESSAGE value="Добавлена вторая ракета, скорректирована скорость." />
-    <MESSAGE value="Добавил взрыв." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил взрыв." />
+    <MESSAGE value="Реализована пауза и изменены размеры ракет." />
+    <MESSAGE value="Взрывы бахают!" />
+    <MESSAGE value="Работа над попаданием и взрывами." />
+    <option name="LAST_COMMIT_MESSAGE" value="Работа над попаданием и взрывами." />
   </component>
 </project>
