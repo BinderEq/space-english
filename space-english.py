@@ -4,6 +4,7 @@ from model.ship import Ship
 from model.rocket import Rocket
 from model.background import Background
 from model.meteor import Meteor
+from model.explosions import Explosions
 from random import randint
 
 pygame.init()
@@ -22,6 +23,7 @@ rocket = []
 pause = False
 
 meteor = []
+explosions = []
 
 
 # ГЛАВНЫЙ ЦИКЛ
@@ -63,10 +65,17 @@ while (playGame):
 
     for i in range(len(meteor)):
         meteor[i].draw(scene)
+        res = meteor[i].is_collision(rocket)
+        if (res != None):
+            explosions.append(Explosions(meteor[i].x, meteor[i].y))
+            res.enabled = False
+            meteor[i].enabled = False
 
     for i in range(len(rocket)):
         rocket[i].draw(scene)
 
+    for i in range(len(explosions)):
+        explosions[i].draw(scene, deltatime)
 
     # Отрисовываем изображения
     pygame.display.flip()
@@ -88,6 +97,11 @@ while (playGame):
         for i in range(len(rocket) - 1, -1, -1):
             if rocket[i].enabled == False:
                 del rocket[i]
+
+        for i in range(len(meteor) - 1, -1, -1):
+            if meteor[i].enabled == False:
+                del meteor[i]
+
         if (randint(0, 100) < 30 and not pause):
             meteor.append(Meteor(randint(0, WIDTH), -40))
 
