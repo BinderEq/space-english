@@ -17,8 +17,8 @@ class Explosions:
         self.enabled = True
 
     def draw(self, scene, deltatime):
-
-        scene.blit(self.skin[self.frame], (self.x, self.y))
+        if self.enabled:
+            scene.blit(self.skin[self.frame], (self.x, self.y))
 
         self.time_frame += deltatime
         if (self.time_frame > 0.25):
