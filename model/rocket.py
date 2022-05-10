@@ -9,7 +9,7 @@ class Rocket:
         # Существует ли ракета
         self.enabled = True
 
-        self.speed = 250
+        self.speed = 125
         self.skin = [pygame.image.load("png/rocket_01.png"),
                   pygame.image.load("png/rocket_02.png"),
                   pygame.image.load("png/rocket_03.png"),

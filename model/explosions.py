@@ -21,7 +21,7 @@ class Explosions:
             scene.blit(self.skin[self.frame], (self.x, self.y))
 
         self.time_frame += deltatime
-        if (self.time_frame > 0.25):
+        if (self.time_frame > 0.0375):
             self.frame += 1
             self.time_frame = 0
             if (self.frame >= len(self.skin)):
