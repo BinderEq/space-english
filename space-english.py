@@ -67,7 +67,7 @@ while (playGame):
         meteor[i].draw(scene)
         res = meteor[i].is_collision(rocket)
         if (res != None):
-            explosions.append(Explosions(meteor[i].x, meteor[i].y))
+            explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
             res.enabled = False
             meteor[i].enabled = False
 
@@ -101,6 +101,10 @@ while (playGame):
         for i in range(len(meteor) - 1, -1, -1):
             if meteor[i].enabled == False:
                 del meteor[i]
+
+        for i in range(len(explosions) - 1, -1, -1):
+            if explosions[i].enabled == False:
+                del explosions[i]
 
         if (randint(0, 100) < 30 and not pause):
             meteor.append(Meteor(randint(0, WIDTH), -40))
