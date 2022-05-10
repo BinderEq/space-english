@@ -25,6 +25,6 @@ class Meteor:
             a = abs(self.x - 16 - rocket[i].x + 16)
             b = abs(self.y - rocket[i].y)
             c = (a ** 2 + b ** 2) ** 0.5
-            if (c < 32 and self.enabled):
+            if (c < 25 and self.enabled):
                 return rocket[i]
         return None
