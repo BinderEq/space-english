@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="Работа над попаданием и взрывами.">
-      <change afterPath="$PROJECT_DIR$/dict/dict.py" afterDir="false" />
+    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652198943025</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Добавлен файл словаря.">
+      <created>1652199145126</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652199145126</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -202,6 +208,7 @@
     <MESSAGE value="Реализована пауза и изменены размеры ракет." />
     <MESSAGE value="Взрывы бахают!" />
     <MESSAGE value="Работа над попаданием и взрывами." />
-    <option name="LAST_COMMIT_MESSAGE" value="Работа над попаданием и взрывами." />
+    <MESSAGE value="Добавлен файл словаря." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен файл словаря." />
   </component>
 </project>
