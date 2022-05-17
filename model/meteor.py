@@ -1,4 +1,5 @@
 import pygame
+from setup import *
 from random import randint
 
 class Meteor:
@@ -10,7 +11,7 @@ class Meteor:
         self.word = word
 
         self.number = []
-
+        self.color = (0, 255, 210)
 
 
         # Придумываем букву
@@ -18,11 +19,17 @@ class Meteor:
         if randint(0, 100) > 60:
             alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             self.char = alphabet[randint(0, len(alphabet) - 1)]
+
+            # Буква, которая ТОЧНО есть
             if randint(0, 100) < 60:
                 self.char = word[randint(0, len(word) - 1)]
             for i in range(len(self.word)):
                 if (self.word[i] == self.char):
                     self.number.append(i)
+
+            if (help):
+                if (len(self.number) == 0):
+                    self.color = (255, 200, 128)
 
 
         self.speed = randint(100, 200)
@@ -39,7 +46,7 @@ class Meteor:
         if (self.enabled):
             scene.blit(self.skin, (self.x, self.y))
             if (self.char != ""):
-                txt = self.font.getSystemText(self.char, self.char, (0, 255, 210))
+                txt = self.font.getSystemText(self.char, self.char, self.color)
                 scene.blit(txt, (self.x + (32 - txt.get_width()) / 2, self.y))
 
     def is_collision(self, rocket):
