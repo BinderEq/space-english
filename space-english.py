@@ -12,7 +12,14 @@ from random import randint
 pygame.init()
 size = [WIDTH, HEIGHT]
 pygame.display.set_caption("Space English")
-scene = pygame.display.set_mode(size)
+
+if (fullScreen):
+    WIDTH = pygame.display.Info().current_w
+    HEIGHT = pygame.display.Info().current_h
+    scene = pygame.display.set_mode(flags=pygame.FULLSCREEN)
+else:
+    scene = pygame.display.set_mode(size)
+
 clock = pygame.time.Clock()
 
 # Фоновый рисунок
