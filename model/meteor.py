@@ -18,7 +18,7 @@ class Meteor:
         if randint(0, 100) > 60:
             alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             self.char = alphabet[randint(0, len(alphabet) - 1)]
-            if randint(0, 100) < 100:
+            if randint(0, 100) < 60:
                 self.char = word[randint(0, len(word) - 1)]
             for i in range(len(self.word)):
                 if (self.word[i] == self.char):

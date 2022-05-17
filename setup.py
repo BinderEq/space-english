@@ -2,7 +2,7 @@ import pygame
 
 WIDTH = 500
 HEIGHT = 850
-fullScreen = True
+fullScreen = False
 
 FPS = 120
 
