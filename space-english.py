@@ -5,6 +5,8 @@ from model.rocket import Rocket
 from model.background import Background
 from model.meteor import Meteor
 from model.explosions import Explosions
+from dict.dict import Dict
+from services.font import Font
 from random import randint
 
 pygame.init()
@@ -16,6 +18,9 @@ clock = pygame.time.Clock()
 # Фоновый рисунок
 background01 = Background(0)
 background02 = Background(-HEIGHT)
+
+font = Font()
+dict = Dict()
 
 frame = 0
 ship = Ship()
@@ -77,6 +82,14 @@ while (playGame):
     for i in range(len(explosions)):
         explosions[i].draw(scene, deltatime)
 
+    scene.blit(font.getBigText("WORD", dict.dict[dict.current_word][1], (255, 255, 255)), (10, 10))
+
+    for i in range(len(dict.marker_chars)):
+        if (dict.marker_chars[i]):
+            scene.blit(font.getBigText("CH", dict.dict[dict.current_word][0][i], (255, 255, 255)), (10 + i * 20, 50))
+        else:
+            scene.blit(font.getBigText("CH2", "*", (255, 255, 255)), (10 + i * 20, 50))
+
     # Отрисовываем изображения
     pygame.display.flip()
 
@@ -87,12 +100,12 @@ while (playGame):
             rocket[i].move(deltatime, frame)
 
         for i in range(len(meteor)):
-            meteor[i].move(deltatime, frame)
+            meteor[i].move(deltatime, HEIGHT)
 
         background01.move(deltatime, HEIGHT)
         background02.move(deltatime, HEIGHT)
 
-    # Удалем ракеты
+    # Удаляем ракеты
     if frame % 25 == 0:
         for i in range(len(rocket) - 1, -1, -1):
             if rocket[i].enabled == False:
@@ -107,7 +120,7 @@ while (playGame):
                 del explosions[i]
 
         if (randint(0, 100) < 30 and not pause):
-            meteor.append(Meteor(randint(0, WIDTH), -40))
+            meteor.append(Meteor(randint(0, WIDTH), -40, font, dict.dict[dict.current_word][0]))
 
 
     # Количество кадров

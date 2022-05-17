@@ -3,9 +3,20 @@ from random import randint
 
 class Meteor:
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, font, word):
         self.x = x
         self.y = y
+        self.font = font
+        self.word = word
+
+        # Придумываем букву
+        self.char = ""
+        if randint(0, 100) > 60:
+            alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            self.char = alphabet[randint(0, len(alphabet) - 1)]
+            if randint(0, 100) < 100:
+                self.char = word[randint(0, len(word) - 1)]
+
         self.speed = randint(100, 200)
         self.skin = pygame.image.load("png/meteor.png")
         self.enabled = True
@@ -19,6 +30,9 @@ class Meteor:
     def draw(self, scene):
         if (self.enabled):
             scene.blit(self.skin, (self.x, self.y))
+            if (self.char != ""):
+                txt = self.font.getSystemText(self.char, self.char, (0, 255, 210))
+                scene.blit(txt, (self.x + (32 - txt.get_width()) / 2, self.y))
 
     def is_collision(self, rocket):
         for i in range(len(rocket)):
