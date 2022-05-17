@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +30,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/services" />
   </component>
   <component name="RunManager" selected="Python.space-english">
     <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -197,7 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652199145126</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Добавлены каталоги.">
+      <created>1652799967480</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652799967481</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Добавлены каталоги.">
+      <created>1652800098350</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652800098350</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,6 +222,7 @@
     <MESSAGE value="Взрывы бахают!" />
     <MESSAGE value="Работа над попаданием и взрывами." />
     <MESSAGE value="Добавлен файл словаря." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен файл словаря." />
+    <MESSAGE value="Добавлены каталоги." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены каталоги." />
   </component>
 </project>
