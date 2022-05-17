@@ -4,7 +4,7 @@ class Dict:
 
     def __init__(self):
         self.current_word = 0
-        self.dict = [["HOUSE", "ДОМ"],
+        self.dict = [["HOUSEFAAWWYSCQ", "ДОМ"],
                      ["CAT", "КОШКА"],
                      ["DOG", "СОБАКА"],
                      ["WATER", "ВОДА"],
