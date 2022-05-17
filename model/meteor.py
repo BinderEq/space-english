@@ -9,6 +9,10 @@ class Meteor:
         self.font = font
         self.word = word
 
+        self.number = []
+
+
+
         # Придумываем букву
         self.char = ""
         if randint(0, 100) > 60:
@@ -16,6 +20,10 @@ class Meteor:
             self.char = alphabet[randint(0, len(alphabet) - 1)]
             if randint(0, 100) < 100:
                 self.char = word[randint(0, len(word) - 1)]
+            for i in range(len(self.word)):
+                if (self.word[i] == self.char):
+                    self.number.append(i)
+
 
         self.speed = randint(100, 200)
         self.skin = pygame.image.load("png/meteor.png")

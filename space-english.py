@@ -72,6 +72,10 @@ while (playGame):
         meteor[i].draw(scene)
         res = meteor[i].is_collision(rocket)
         if (res != None):
+            if (len(meteor[i].number) > 0):
+                for j in range(len(meteor[i].number)):
+                    dict.marker_chars[meteor[i].number[j]] = not dict.marker_chars[meteor[i].number[j]]
+
             explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
             res.enabled = False
             meteor[i].enabled = False
@@ -120,7 +124,7 @@ while (playGame):
                 del explosions[i]
 
         if (randint(0, 100) < 30 and not pause):
-            meteor.append(Meteor(randint(0, WIDTH), -40, font, dict.dict[dict.current_word][0]))
+            meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.dict[dict.current_word][0]))
 
 
     # Количество кадров
