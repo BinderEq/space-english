@@ -8,7 +8,7 @@ from model.explosions import Explosions
 from dict.dict import Dict
 from services.font import Font
 from random import randint
-
+from services.sound import Sound
 pygame.init()
 size = [WIDTH, HEIGHT]
 pygame.display.set_caption("Space English")
@@ -27,6 +27,7 @@ background01 = Background(0)
 background02 = Background(-HEIGHT)
 
 font = Font()
+sound = Sound(pygame)
 dict = Dict()
 
 frame = 0
@@ -59,9 +60,10 @@ while (playGame):
         elif (event.type == pygame.MOUSEBUTTONDOWN):
             if (event.button == 1 and not pause):
                 rocket.append(Rocket(ship.x, ship.y))
+                sound.play(Sound.SHOOT)
             if (event.button == 3 and not pause):
                 rocket.append(Rocket(ship.x + 48, ship.y))
-
+                sound.play(Sound.SHOOT)
     if (pygame.mouse.get_pos()[0] < ship.x and not pause):
         ship.move_left(deltatime)
     elif (pygame.mouse.get_pos()[0] > ship.x + 64 and not pause):
@@ -79,10 +81,11 @@ while (playGame):
         meteor[i].draw(scene)
         res = meteor[i].is_collision(rocket)
         if (res != None):
+            sound.play(Sound.EXPL)
             if (len(meteor[i].number) > 0):
                 for j in range(len(meteor[i].number)):
                     dict.marker_chars[meteor[i].number[j]] = not dict.marker_chars[meteor[i].number[j]]
-
+                sound.play(Sound.TAKE)
             explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
             res.enabled = False
             meteor[i].enabled = False

@@ -3,8 +3,8 @@ from random import randint
 class Dict:
 
     def __init__(self):
-        self.current_word = 0
-        self.dict = [["HOUSEFAAWWYSCQ", "ДОМ"],
+        self.current_word = 3
+        self.dict = [["HOUSE", "ДОМ"],
                      ["CAT", "КОШКА"],
                      ["DOG", "СОБАКА"],
                      ["WATER", "ВОДА"],
