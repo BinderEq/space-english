@@ -10,8 +10,8 @@ help = False
 FPS = 120
 
 BLACK = (0, 0, 0)
-x = input('Введите слово: ')
-y = input('Введите перевод слова: ')
+#x = input('Введите слово: ')
+#y = input('Введите перевод слова: ')
 
 playGame = True    
 

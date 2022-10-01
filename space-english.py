@@ -9,6 +9,7 @@ from dict.dict import Dict
 from services.font import Font
 from random import randint
 from services.sound import Sound
+dict = Dict()
 pygame.init()
 size = [WIDTH, HEIGHT]
 pygame.display.set_caption("Space English")
@@ -28,7 +29,7 @@ background02 = Background(-HEIGHT)
 
 font = Font()
 sound = Sound(pygame)
-dict = Dict()
+
 
 frame = 0
 ship = Ship()
