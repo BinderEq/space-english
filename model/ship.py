@@ -22,3 +22,6 @@ class Ship:
 
     def move_right(self, delta):
         self.x += 300 * delta
+
+    def inc_frame(self):
+        self.frame += 1

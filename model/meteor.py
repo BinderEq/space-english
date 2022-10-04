@@ -1,7 +1,7 @@
 import pygame
 from setup import *
 from random import randint
-from ship import Ship
+from model.ship import Ship
 class Meteor:
 
     def __init__(self, x, y, font, word):
@@ -57,8 +57,15 @@ class Meteor:
             if (c < 25 and self.enabled):
                 return rocket[i]
         return None
-    def is_collision_ship(self, ship: Ship):
-        a = abs(self.x - 16 - ship[i].x + 16)
-        b = abs(self.y - 16 - ship[i].y + 16)
 
+    def is_collision_ship(self, ship: Ship):
+        a = abs(self.x - 16 - ship.x + 16)
+        b = abs(self.y - 16 - ship.y + 16)
+        c = (a **  2 + b ** 2) ** 0.5
+
+
+        if (c < 32 and self.enabled == True):
+            ship.inc_frame()
+            self.enabled = False
+            return True
 

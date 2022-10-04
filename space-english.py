@@ -80,6 +80,9 @@ while (playGame):
 
     for i in range(len(meteor)):
         meteor[i].draw(scene)
+        res = meteor[i].is_collision_ship(ship)
+        if (res == True):
+            explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
         res = meteor[i].is_collision(rocket)
         if (res != None):
             sound.play(Sound.EXPL)

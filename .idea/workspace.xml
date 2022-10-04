@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dict/dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/dict/dict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/meteor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/meteor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ship.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space-english.py" beforeDir="false" afterPath="$PROJECT_DIR$/space-english.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +23,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,7 +52,7 @@
       <recent name="D:\Projects\PyProj\space-english\services" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.setup">
+  <component name="RunManager" selected="Python.space-english">
     <configuration name="dict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="space-english" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,9 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.space-english" />
         <item itemvalue="Python.setup" />
         <item itemvalue="Python.dict" />
-        <item itemvalue="Python.space-english" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +280,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653583044192</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Много чего нового.">
+      <created>1661277731550</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1661277731550</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Много чего нового.">
+      <created>1664611846873</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664611846873</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -284,15 +309,5 @@
     <MESSAGE value="Добавлены каталоги." />
     <MESSAGE value="Много чего нового." />
     <option name="LAST_COMMIT_MESSAGE" value="Много чего нового." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/meteor.py</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
