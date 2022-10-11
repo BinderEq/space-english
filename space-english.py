@@ -29,7 +29,7 @@ background02 = Background(-HEIGHT)
 
 font = Font()
 sound = Sound(pygame)
-
+sound.play(Sound.OKGO)
 
 frame = 0
 ship = Ship()
