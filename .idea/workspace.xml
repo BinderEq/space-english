@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sound/collision.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sound/ok_go.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dict/dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/dict/dict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/meteor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/meteor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ship.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/space-english.py" beforeDir="false" afterPath="$PROJECT_DIR$/space-english.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +48,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Python\PyCharmProject\space-english\sound" />
       <recent name="D:\Projects\PyProj\space-english\services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Python\PyCharmProject\space-english\sound" />
     </key>
   </component>
   <component name="RunManager" selected="Python.space-english">
