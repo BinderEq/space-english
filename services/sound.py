@@ -14,6 +14,10 @@ class Sound:
         self.sounds.append(pygame.mixer.Sound("sound/ok_go.mp3"))
         self.sounds.append(pygame.mixer.Sound("sound/collision.mp3"))
         self.sounds.append(pygame.mixer.Sound("sound/boom.mp3"))
+        self.sounds.append(pygame.mixer.Sound("sound/boom.mp3"))
+        self.sounds.append(pygame.mixer.Sound("sound/boom.mp3"))
+        self.sounds.append(pygame.mixer.Sound("sound/boom.mp3"))
+        self.sounds.append(pygame.mixer.Sound("sound/boom.mp3"))
 
 
 
