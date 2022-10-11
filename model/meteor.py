@@ -2,14 +2,16 @@ import pygame
 from setup import *
 from random import randint
 from model.ship import Ship
+from services.sound import Sound
+
 class Meteor:
 
-    def __init__(self, x, y, font, word):
+    def __init__(self, x, y, font, word, snd):
         self.x = x
         self.y = y
         self.font = font
         self.word = word
-
+        self.snd = snd
         self.number = []
         self.color = (0, 255, 210)
 
@@ -67,5 +69,6 @@ class Meteor:
         if (c < 32 and self.enabled == True):
             ship.inc_frame()
             self.enabled = False
+            self.snd.play(Sound.BOOM)
             return True
 

@@ -138,7 +138,7 @@ while (playGame):
                 del explosions[i]
 
         if (randint(0, 100) < 30 and not pause):
-            meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.dict[dict.current_word][0]))
+            meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.dict[dict.current_word][0], sound))
 
 
     # Количество кадров

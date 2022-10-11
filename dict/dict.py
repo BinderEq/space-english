@@ -25,7 +25,7 @@ class Dict:
                      ["MOTHER", "МАМА"],
                      ["FATHER", "ПАПА"],
                      ["BAG", "СУМКА"],
-                     ["HAD", "РУКА"]]
+                     ["HAND", "РУКА"]]
         self.current_word = randint(0, len(self.dict) - 1)
         self.marker_chars = self.get_marker_chars()
 
