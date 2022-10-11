@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sound/boom.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/meteor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/meteor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/sound.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/sound.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/space-english.py" beforeDir="false" afterPath="$PROJECT_DIR$/space-english.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665495717759</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Много чего нового.">
+      <created>1665497438459</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665497438459</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
