@@ -66,7 +66,7 @@ class Meteor:
         c = (a ** 2 + b ** 2) ** 0.5
 
 
-        if (c < 45 and self.enabled == True):
+        if (c < 48 and self.enabled == True):
             ship.inc_frame()
             self.enabled = False
             self.snd.play(Sound.BOOM)
