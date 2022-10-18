@@ -61,12 +61,12 @@ class Meteor:
         return None
 
     def is_collision_ship(self, ship: Ship):
-        a = abs(self.x - 0 - ship.x - 0)
-        b = abs(self.y - 0 - ship.y - 0)
-        c = (a **  2 + b ** 2) ** 0.5
+        a = abs((self.x + 16) - (ship.x + 32))
+        b = abs((self.y + 16) - (ship.y + 32))
+        c = (a ** 2 + b ** 2) ** 0.5
 
 
-        if (c < 32 and self.enabled == True):
+        if (c < 48 and self.enabled == True):
             ship.inc_frame()
             self.enabled = False
             self.snd.play(Sound.BOOM)
