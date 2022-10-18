@@ -61,8 +61,8 @@ class Meteor:
         return None
 
     def is_collision_ship(self, ship: Ship):
-        a = abs(self.x - 16 - ship.x + 16)
-        b = abs(self.y - 16 - ship.y + 16)
+        a = abs(self.x - 0 - ship.x - 0)
+        b = abs(self.y - 0 - ship.y - 0)
         c = (a **  2 + b ** 2) ** 0.5
 
 
