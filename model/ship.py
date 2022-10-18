@@ -25,3 +25,6 @@ class Ship:
 
     def inc_frame(self):
         self.frame += 1
+
+    def inc_frame(self):
+        self.frame += 1

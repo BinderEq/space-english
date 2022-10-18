@@ -28,6 +28,7 @@ class Dict:
                      ["HAND", "РУКА"]]
         self.current_word = randint(0, len(self.dict) - 1)
         self.marker_chars = self.get_marker_chars()
+        print(self.marker_chars)
 
     def get_marker_chars(self):
         ret = []
