@@ -17,3 +17,8 @@ playGame = True
 
 deltatime = 0
 
+VIEW_SCREEN = 0
+PLAY_GAME = 5
+END_GAME = 8
+
+state = VIEW_SCREEN
