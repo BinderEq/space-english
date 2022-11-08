@@ -39,7 +39,8 @@ pause = False
 
 meteor = []
 explosions = []
-v = View()
+v = View('png/obloshka.png')
+obj = View('png/end.png')
 
 # ГЛАВНЫЙ ЦИКЛ
 while (playGame):
@@ -57,6 +58,22 @@ while (playGame):
         scene.fill(BLACK)
         v.draw(scene)
         pygame.display.flip()
+
+
+    elif (state == END_GAME):
+        for event in pygame.event.get():
+            if (event.type == pygame.QUIT):
+                playGame = False
+            elif (event.type == pygame.KEYDOWN):
+                if (event.key == pygame.K_ESCAPE):
+                    playGame = False
+            elif (event.type == pygame.MOUSEBUTTONDOWN):
+                if (event.button == 1):
+                    playGame = False
+        scene.fill(BLACK)
+        obj.draw(scene)
+        pygame.display.flip()
+
 
 
     elif state == PLAY_GAME:
@@ -174,4 +191,5 @@ while (playGame):
 
 
 # Конец истории
+
 pygame.quit()
