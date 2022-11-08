@@ -57,6 +57,8 @@ while (playGame):
         scene.fill(BLACK)
         v.draw(scene)
         pygame.display.flip()
+
+
     elif state == PLAY_GAME:
         for event in pygame.event.get():
             if (event.type == pygame.QUIT):
@@ -96,6 +98,11 @@ while (playGame):
         for i in range(len(meteor)):
             meteor[i].draw(scene)
             res = meteor[i].is_collision_ship(ship)
+
+            # Отображаем картинку финала
+            if (ship.is_dead()):
+                state = END_GAME
+
             if (res == True):
                 explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
             res = meteor[i].is_collision(rocket)

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="">
+    <list default="true" id="deaae9e6-9db8-4f6c-b786-73db9f0c3ccf" name="Changes" comment="Много чего нового.">
+      <change afterPath="$PROJECT_DIR$/view/view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/meteor.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/meteor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ship.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/ship.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space-english.py" beforeDir="false" afterPath="$PROJECT_DIR$/space-english.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +50,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Python\PyCharmProject\space-english\sound" />
       <recent name="D:\Projects\PyProj\space-english\services" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Python\PyCharmProject\space-english\sound" />
     </key>
   </component>
   <component name="RunManager" selected="Python.space-english">
@@ -295,42 +295,25 @@
       <updated>1664611846873</updated>
     </task>
     <task id="LOCAL-00024" summary="Много чего нового.">
-      <created>1665495717759</created>
+      <created>1666101085804</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1665495717759</updated>
+      <updated>1666101085804</updated>
     </task>
-    <task id="LOCAL-00025" summary="Много чего нового.">
-      <created>1665497438459</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497438459</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Много чего нового.">
-      <created>1665497718553</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497718553</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Много чего нового.">
-      <created>1665497810273</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497810273</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Много чего нового.">
-      <created>1665497860430</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497860430</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="25" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавил каталог и файл read.me." />

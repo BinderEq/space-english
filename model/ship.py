@@ -1,6 +1,7 @@
 import pygame
 
 class Ship:
+
     def __init__(self):
         self.x = 218
         self.y = 750
@@ -12,10 +13,11 @@ class Ship:
                      pygame.image.load('png/space_ship brick_05.png'),
                      pygame.image.load('png/space_ship brick_06.png')]
         self.frame = 0
-
+        self.live = True
 
     def draw(self, scene):
-        scene.blit(self.skin[self.frame], (self.x, self.y))
+        if (self.live == True):
+            scene.blit(self.skin[self.frame], (self.x, self.y))
 
     def move_left(self, delta):
         self.x -= 300 * delta
@@ -25,6 +27,9 @@ class Ship:
 
     def inc_frame(self):
         self.frame += 1
+        if (self.frame == len(self.skin)):
+            self.live = False
 
-    def inc_frame(self):
-        self.frame += 1
+    def is_dead(self):
+        return not self.live
+

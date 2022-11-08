@@ -1,6 +1,4 @@
 import pygame
-
-
 WIDTH = 500
 HEIGHT = 850
 fullScreen = False
@@ -18,7 +16,7 @@ playGame = True
 deltatime = 0
 
 VIEW_SCREEN = 0
-PLAY_GAME = 5
-END_GAME = 8
+PLAY_GAME = 10
+END_GAME = 13
 
 state = VIEW_SCREEN
