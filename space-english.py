@@ -1,4 +1,6 @@
 # Подключаем pygame
+import pygame
+
 from setup import *
 from model.ship import Ship
 from model.rocket import Rocket
@@ -10,9 +12,10 @@ from services.font import Font
 from random import randint
 from services.sound import Sound
 from view import View
-dict = Dict()
+
 pygame.init()
 size = [WIDTH, HEIGHT]
+
 pygame.display.set_caption("Space English")
 
 if (fullScreen):
@@ -38,6 +41,7 @@ rocket = []
 pause = False
 
 meteor = []
+
 explosions = []
 v = View('png/obloshka.png')
 obj = View('png/end.png')
@@ -54,6 +58,7 @@ while (playGame):
             elif (event.type == pygame.MOUSEBUTTONDOWN):
                 if (event.button == 1):
                     state = PLAY_GAME
+                    dict = Dict(level, sound)
                     sound.play(Sound.OKGO)
         scene.fill(BLACK)
         v.draw(scene)
@@ -74,7 +79,34 @@ while (playGame):
         obj.draw(scene)
         pygame.display.flip()
 
+    elif state == NEXT_LEVEL:
+        for event in pygame.event.get():
+            if (event.type == pygame.QUIT):
+                playGame = False
+            elif (event.type == pygame.KEYDOWN):
+                if (event.key == pygame.K_ESCAPE):
+                    playGame = False
+            elif (event.type == pygame.MOUSEBUTTONDOWN):
+                if (event.button == 1):
+                    dict = Dict(level, sound)
+                    frame = 0
+                    ship = Ship()
+                    rocket = []
+                    pause = False
 
+                    meteor = []
+                    explosions = []
+                    state = PLAY_GAME
+
+        scene.fill(BLACK)
+
+        background01.draw(scene, ship.x)
+        background02.draw(scene, ship.x)
+
+        scene.blit(font.getBigText("HAPPY", f"ПОЗДРАВЛЯЕМ!", level_color[level]), (138, 400))
+        scene.blit(font.getSystemText("NEXTLEVEL", f"Следующий уровень: {level + 1}", (200, 200, 200)), (115, 450))
+
+        pygame.display.flip()
 
     elif state == PLAY_GAME:
         for event in pygame.event.get():
@@ -93,6 +125,14 @@ while (playGame):
                     print("ВНИЗ")
                 elif (event.key == pygame.K_i):
                     pause = not pause
+                elif (event.key == pygame.K_1):
+                    i = 0
+                    while i < len(dict.marker_chars):
+                        if (dict.marker_chars[i] == False):
+                            dict.marker_chars[i] = True
+                            i = len(dict.marker_chars)
+                        i += 1
+
             elif (event.type == pygame.MOUSEBUTTONDOWN):
                 if (event.button == 1 and not pause):
                     rocket.append(Rocket(ship.x, ship.y))
@@ -139,13 +179,24 @@ while (playGame):
         for i in range(len(explosions)):
             explosions[i].draw(scene, deltatime)
 
-        scene.blit(font.getBigText("WORD", dict.dict[dict.current_word][1], (255, 255, 255)), (10, 10))
+        scene.blit(font.getBigText("WORD", dict.get_word(1), (255, 255, 255)), (10, 10))
+        scene.blit(font.getBigText("LVL", f"Уровень: {level + 1}", level_color[level]), (300, 10))
+        scene.blit(font.getSystemText("NUMWORD", f"Слово: {dict.current_word + 1} из 5", (200, 200, 200)), (10, 815))
 
         for i in range(len(dict.marker_chars)):
             if (dict.marker_chars[i]):
-                scene.blit(font.getBigText("CH", dict.dict[dict.current_word][0][i], (255, 255, 255)), (10 + i * 20, 50))
+                scene.blit(font.getBigText("CH", dict.get_word(0)[i], (255, 255, 255)), (10 + i * 20, 50))
             else:
                 scene.blit(font.getBigText("CH2", "*", (255, 255, 255)), (10 + i * 20, 50))
+
+        # Когда слово собрано ПОЛНОСТЬЮ
+        if (dict.is_word_complete()):
+            # Увеличиваем номер слова
+            # Если увеличить не получилось, значит,
+            # в этой позиции всё прошли
+            if (not dict.inc_number_word()):
+                level += 1
+                state = NEXT_LEVEL
 
         # Отрисовываем изображения
         pygame.display.flip()
@@ -162,7 +213,7 @@ while (playGame):
             background01.move(deltatime, HEIGHT)
             background02.move(deltatime, HEIGHT)
 
-        # Удаляем ракеты
+        # Удаляем ракеты и добавляем метеоры
         if frame % 25 == 0:
             for i in range(len(rocket) - 1, -1, -1):
                 if rocket[i].enabled == False:
@@ -177,7 +228,9 @@ while (playGame):
                     del explosions[i]
 
             if (randint(0, 100) < 30 and not pause):
-                meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.dict[dict.current_word][0], sound))
+                meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.get_word(0), sound))
+
+
 
 
     # Количество кадров
