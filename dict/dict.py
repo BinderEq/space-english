@@ -46,8 +46,16 @@ class Dict:
                      ["FATHER", "ПАПА"],
                      ["BAG", "СУМКА"],
                      ["HAND", "РУКА"]]
-        self.dict_lvl08 = [[]]
-        self.dict_lvl09 = [[]]
+        self.dict_lvl08 = [['', ''],
+                           ['', ''],
+                           ['', ''],
+                           ['', ''],
+                           ['', '']]
+        self.dict_lvl09 = [['ELABORATE', 'РАЗРАБАТЫВАТЬ'],
+                           ['HUMILATE', 'УНИЖАТЬ'],
+                           ['UNIFY', 'ОБЪЕДИНЯТЬ'],
+                           ['EVADE', 'ОБОЙТИ'],
+                           ['SURRENDER', 'СДАВАТЬСЯ']]
         self.dict_lvl10 = [['COLLAPSE', 'РАЗРУШАТЬСЯ'],
                             ['CONVENIENT', 'УДОБНЫЙ' ],
                             ['DEPTH', 'ГЛУБИНА'],

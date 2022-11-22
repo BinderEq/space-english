@@ -12,6 +12,7 @@ from services.font import Font
 from random import randint
 from services.sound import Sound
 from view import View
+from model.heart import Heart
 
 pygame.init()
 size = [WIDTH, HEIGHT]
@@ -41,6 +42,7 @@ rocket = []
 pause = False
 
 meteor = []
+heart = []
 
 explosions = []
 v = View('png/obloshka.png')
@@ -173,6 +175,10 @@ while (playGame):
                 res.enabled = False
                 meteor[i].enabled = False
 
+        for i in range(len(heart)):
+            heart[i].draw(scene)
+            heart[i].move(deltatime, HEIGHT)
+            res = heart[i].is_collision_ship(ship)
         for i in range(len(rocket)):
             rocket[i].draw(scene)
 
@@ -197,6 +203,7 @@ while (playGame):
             if (not dict.inc_number_word()):
                 level += 1
                 state = NEXT_LEVEL
+
 
         # Отрисовываем изображения
         pygame.display.flip()
@@ -229,6 +236,9 @@ while (playGame):
 
             if (randint(0, 100) < 30 and not pause):
                 meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.get_word(0), sound))
+
+            if (randint(0, 100) < 30 and not pause):
+                heart.append(Heart(randint(0, WIDTH - 16), -40, sound))
 
 
 

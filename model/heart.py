@@ -12,7 +12,7 @@ class Heart:
         self.snd = snd
         self.number = []
 
-        self.speed = randint(300, 500)
+        self.speed = randint(100, 200)
         self.skin = pygame.image.load("png/heart.png")
         self.enabled = True
 
@@ -40,8 +40,8 @@ class Heart:
         b = abs((self.y + 16) - (ship.y + 32))
         c = (a ** 2 + b ** 2) ** 0.5
 
-        if (c < 48 and self.enabled == True):
-            ship.inc_frame()
+        if (c < 24 and self.enabled == True):
+
             self.enabled = False
             self.snd.play(Sound.BOOM)
             return True
