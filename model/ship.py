@@ -25,6 +25,11 @@ class Ship:
     def move_right(self, delta):
         self.x += 300 * delta
 
+    def dec_frame(self):
+        self.frame -= 1
+        if self.frame < 0:
+            self.frame = 0
+
     def inc_frame(self):
         self.frame += 1
         if (self.frame == len(self.skin)):

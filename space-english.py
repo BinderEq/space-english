@@ -164,6 +164,7 @@ while (playGame):
 
             if (res == True):
                 explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
+
             res = meteor[i].is_collision(rocket)
             if (res != None):
                 sound.play(Sound.EXPL)
@@ -175,10 +176,16 @@ while (playGame):
                 res.enabled = False
                 meteor[i].enabled = False
 
+
+
         for i in range(len(heart)):
             heart[i].draw(scene)
             heart[i].move(deltatime, HEIGHT)
+
             res = heart[i].is_collision_ship(ship)
+            if (res == True):
+                explosions.append(Explosions(heart[i].x - 16, heart[i].y - 16))
+
         for i in range(len(rocket)):
             rocket[i].draw(scene)
 
@@ -234,14 +241,16 @@ while (playGame):
                 if explosions[i].enabled == False:
                     del explosions[i]
 
+            for i in range(len(heart) - 1, -1, -1):
+                if heart[i].enabled == False:
+                    del heart[i]
+
             if (randint(0, 100) < 30 and not pause):
                 meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.get_word(0), sound))
 
-            if (randint(0, 100) < 30 and not pause):
+            # if (randint(0, 100) < 20):
+            if (randint(0, 100) < 20 and len(heart) == 0 and ship.frame > 0 and not pause):
                 heart.append(Heart(randint(0, WIDTH - 16), -40, sound))
-
-
-
 
     # Количество кадров
     frame += 1

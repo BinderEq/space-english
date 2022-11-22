@@ -12,12 +12,19 @@ class Heart:
         self.snd = snd
         self.number = []
 
-        self.speed = randint(100, 200)
+        self.speed_y = randint(150, 250)
+        self.speed_x = randint(-100, 100)
+
         self.skin = pygame.image.load("png/heart.png")
         self.enabled = True
 
     def move(self, delta, height):
-        self.y += self.speed * delta
+        self.x += self.speed_x * delta
+        if self.x < 0 or self.x > WIDTH - self.skin.get_width():
+            self.speed_x = -self.speed_x
+            self.x += self.speed_x * delta
+
+        self.y += self.speed_y * delta
         if(self.y > height):
             self.enabled = False
 
@@ -41,8 +48,10 @@ class Heart:
         c = (a ** 2 + b ** 2) ** 0.5
 
         if (c < 24 and self.enabled == True):
-
+            ship.dec_frame()
             self.enabled = False
             self.snd.play(Sound.BOOM)
             return True
+
+        return False
 
