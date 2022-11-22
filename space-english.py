@@ -244,5 +244,5 @@ while (playGame):
 
 
 # Конец истории
-
+              
 pygame.quit()

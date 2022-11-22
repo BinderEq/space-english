@@ -30,22 +30,31 @@ class Dict:
                      ["CAT", "КОШКА"],
                      ["DOG", "СОБАКА"],
                      ["WATER", "ВОДА"],
-                     ["FLOWER", "ЦВЕТОК"],
-                     ["GREEN", "ЗЕЛЁНЫЙ"],
+                     ["FLOWER", "ЦВЕТОК"]]
+        self.dict_lvl05 = [["GREEN", "ЗЕЛЁНЫЙ"],
                      ["PEN", "РУЧКА"],
                      ["PENCIL", "КАРАНДАШ"],
                      ["SCHOOL", "ШКОЛА"],
-                     ["WORLD", "МИР"],
-                     ["DOOR", "ДВЕРЬ"],
+                     ["WORLD", "МИР"]]
+        self.dict_lvl06 = [["DOOR", "ДВЕРЬ"],
                      ["CHAIR", "СТУЛ"],
                      ["BED", "КРОВАТЬ"],
                      ["APPLE", "ЯБЛОКО"],
-                     ["TABLE", "СТОЛ"],
-                     ["BLACK", "ЧЁРНЫЙ"],
+                     ["TABLE", "СТОЛ"]]
+        self.dict_lvl07 = [["BLACK", "ЧЁРНЫЙ"],
                      ["MOTHER", "МАМА"],
                      ["FATHER", "ПАПА"],
                      ["BAG", "СУМКА"],
                      ["HAND", "РУКА"]]
+        self.dict_lvl08 = [[]]
+        self.dict_lvl09 = [[]]
+        self.dict_lvl10 = [['COLLAPSE', 'РАЗРУШАТЬСЯ'],
+                            ['CONVENIENT', 'УДОБНЫЙ' ],
+                            ['DEPTH', 'ГЛУБИНА'],
+                            ['DETERIORATE', 'УХУДШАТЬ'],
+                            ['DISTRICT', 'РАЙОН'],
+                            ['ENTOURAGE', 'ОКРУЖЕНИЕ']]
+
 
         self.dict = []
         self.dict.append(self.dict_lvl01)
