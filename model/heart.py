@@ -50,7 +50,7 @@ class Heart:
         if (c < 24 and self.enabled == True):
             ship.dec_frame()
             self.enabled = False
-            self.snd.play(Sound.BOOM)
+            self.snd.play(Sound.HEAL)
             return True
 
         return False
