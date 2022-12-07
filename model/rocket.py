@@ -1,5 +1,8 @@
 import pygame
 
+import setup
+
+
 class Rocket:
 
     def __init__(self, x, y):
@@ -9,7 +12,7 @@ class Rocket:
         # Существует ли ракета
         self.enabled = True
 
-        self.speed = 125
+        self.speed = 150
         self.skin = [pygame.image.load("png/rocket_01.png"),
                   pygame.image.load("png/rocket_02.png"),
                   pygame.image.load("png/rocket_03.png"),
@@ -23,7 +26,10 @@ class Rocket:
         self.frame = 0
 
     def move(self, delta, frame):
-        self.y -= self.speed * delta
+        if setup.fuel > 0:
+            self.y -= self.speed * delta
+        else:
+            self.y -= self.speed * 4 * delta
 
         if self.y < 0:
             self.enabled = False

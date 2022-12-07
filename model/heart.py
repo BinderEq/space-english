@@ -1,4 +1,6 @@
 import pygame
+
+import setup
 from setup import *
 from random import randint
 from model.ship import Ship
@@ -19,7 +21,11 @@ class Heart:
         self.enabled = True
 
     def move(self, delta, height):
-        self.x += self.speed_x * delta
+        if setup.fuel > 0:
+            self.x += self.speed_x * delta
+        else:
+            self.x += self.speed_x * 2 * delta
+
         if self.x < 0 or self.x > WIDTH - self.skin.get_width():
             self.speed_x = -self.speed_x
             self.x += self.speed_x * delta

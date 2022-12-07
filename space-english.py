@@ -3,6 +3,7 @@ import pygame
 
 from setup import *
 from model.ship import Ship
+from model.fuels import Fuels
 from model.rocket import Rocket
 from model.background import Background
 from model.meteor import Meteor
@@ -35,7 +36,6 @@ background02 = Background(-HEIGHT)
 font = Font()
 sound = Sound(pygame)
 
-
 frame = 0
 ship = Ship()
 rocket = []
@@ -43,14 +43,16 @@ pause = False
 
 meteor = []
 heart = []
+fuels = Fuels()
 
 explosions = []
 v = View('png/obloshka.png')
 obj = View('png/end.png')
 
 # ГЛАВНЫЙ ЦИКЛ
-while (playGame):
-    if (state == VIEW_SCREEN):
+while playGame:
+
+    if state == VIEW_SCREEN:
         for event in pygame.event.get():
             if (event.type == pygame.QUIT):
                 playGame = False
@@ -66,8 +68,7 @@ while (playGame):
         v.draw(scene)
         pygame.display.flip()
 
-
-    elif (state == END_GAME):
+    elif state == END_GAME:
         for event in pygame.event.get():
             if (event.type == pygame.QUIT):
                 playGame = False
@@ -83,13 +84,13 @@ while (playGame):
 
     elif state == NEXT_LEVEL:
         for event in pygame.event.get():
-            if (event.type == pygame.QUIT):
+            if event.type == pygame.QUIT:
                 playGame = False
-            elif (event.type == pygame.KEYDOWN):
-                if (event.key == pygame.K_ESCAPE):
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
                     playGame = False
-            elif (event.type == pygame.MOUSEBUTTONDOWN):
-                if (event.button == 1):
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == 1:
                     dict = Dict(level, sound)
                     frame = 0
                     ship = Ship()
@@ -152,6 +153,8 @@ while (playGame):
         background01.draw(scene, ship.x)
         background02.draw(scene, ship.x)
 
+        fuels.draw(scene)
+
         ship.draw(scene)
 
         for i in range(len(meteor)):
@@ -175,8 +178,6 @@ while (playGame):
                 explosions.append(Explosions(meteor[i].x - 16, meteor[i].y - 16))
                 res.enabled = False
                 meteor[i].enabled = False
-
-
 
         for i in range(len(heart)):
             heart[i].draw(scene)
@@ -211,12 +212,16 @@ while (playGame):
                 level += 1
                 state = NEXT_LEVEL
 
-
         # Отрисовываем изображения
         pygame.display.flip()
 
         # Расчёты:
         # ...
+
+
+        # Уменьшаем топливо
+        # fuels.dec_fuel(deltatime)
+
         if not pause:
             for i in range(len(rocket)):
                 rocket[i].move(deltatime, frame)
@@ -261,7 +266,6 @@ while (playGame):
     # Время, прошедшее между кадрами
     deltatime = clock.tick(FPS) / 1000
 
-
 # Конец истории
-              
+
 pygame.quit()

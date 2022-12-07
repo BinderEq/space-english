@@ -1,4 +1,6 @@
 import pygame
+import setup
+
 
 class Ship:
 
@@ -20,9 +22,13 @@ class Ship:
             scene.blit(self.skin[self.frame], (self.x, self.y))
 
     def move_left(self, delta):
+        if setup.fuel <= 0:
+            return False
         self.x -= 300 * delta
 
     def move_right(self, delta):
+        if setup.fuel <= 0:
+            return False
         self.x += 300 * delta
 
     def dec_frame(self):

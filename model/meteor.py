@@ -1,8 +1,11 @@
 import pygame
+
+import setup
 from setup import *
 from random import randint
 from model.ship import Ship
 from services.sound import Sound
+
 
 class Meteor:
 
@@ -14,7 +17,6 @@ class Meteor:
         self.snd = snd
         self.number = []
         self.color = (0, 255, 210)
-
 
         # Придумываем букву
         self.char = ""
@@ -33,19 +35,22 @@ class Meteor:
                 if (len(self.number) == 0):
                     self.color = (255, 200, 128)
 
-
         self.speed = randint(100, 200)
         self.skin = pygame.image.load("png/meteor.png")
         self.enabled = True
         self.frame = 0
 
     def move(self, delta, height):
-        self.y += self.speed * delta
-        if(self.y > height):
+        if setup.fuel > 0:
+            self.y += self.speed * delta
+        else:
+            self.y += self.speed * 2 * delta
+
+        if self.y > height:
             self.enabled = False
 
     def draw(self, scene):
-        if (self.enabled):
+        if self.enabled:
             scene.blit(self.skin, (self.x, self.y))
             if (self.char != ""):
                 txt = self.font.getSystemText(self.char, self.char, self.color)
@@ -65,10 +70,8 @@ class Meteor:
         b = abs((self.y + 16) - (ship.y + 32))
         c = (a ** 2 + b ** 2) ** 0.5
 
-
         if (c < 48 and self.enabled == True):
             ship.inc_frame()
             self.enabled = False
             self.snd.play(Sound.BOOM)
             return True
-

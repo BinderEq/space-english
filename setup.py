@@ -1,15 +1,16 @@
 import pygame
 WIDTH = 500
 HEIGHT = 850
+
+
 fullScreen = False
-
 help = False
-
 FPS = 120
-
 BLACK = (0, 0, 0)
 
 level = 0
+fuel = 1000
+fuel_decrease_sec = 150
 
 playGame = True    
 

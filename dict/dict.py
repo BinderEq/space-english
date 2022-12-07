@@ -31,31 +31,37 @@ class Dict:
                      ["DOG", "СОБАКА"],
                      ["WATER", "ВОДА"],
                      ["FLOWER", "ЦВЕТОК"]]
+
         self.dict_lvl05 = [["GREEN", "ЗЕЛЁНЫЙ"],
                      ["PEN", "РУЧКА"],
                      ["PENCIL", "КАРАНДАШ"],
                      ["SCHOOL", "ШКОЛА"],
                      ["WORLD", "МИР"]]
+
         self.dict_lvl06 = [["DOOR", "ДВЕРЬ"],
                      ["CHAIR", "СТУЛ"],
                      ["BED", "КРОВАТЬ"],
                      ["APPLE", "ЯБЛОКО"],
                      ["TABLE", "СТОЛ"]]
+
         self.dict_lvl07 = [["BLACK", "ЧЁРНЫЙ"],
                      ["MOTHER", "МАМА"],
                      ["FATHER", "ПАПА"],
                      ["BAG", "СУМКА"],
                      ["HAND", "РУКА"]]
+
         self.dict_lvl08 = [['', ''],
                            ['', ''],
                            ['', ''],
                            ['', ''],
                            ['', '']]
+
         self.dict_lvl09 = [['ELABORATE', 'РАЗРАБАТЫВАТЬ'],
                            ['HUMILATE', 'УНИЖАТЬ'],
                            ['UNIFY', 'ОБЪЕДИНЯТЬ'],
                            ['EVADE', 'ОБОЙТИ'],
                            ['SURRENDER', 'СДАВАТЬСЯ']]
+
         self.dict_lvl10 = [['COLLAPSE', 'РАЗРУШАТЬСЯ'],
                             ['CONVENIENT', 'УДОБНЫЙ' ],
                             ['DEPTH', 'ГЛУБИНА'],
@@ -64,11 +70,19 @@ class Dict:
                             ['ENTOURAGE', 'ОКРУЖЕНИЕ']]
 
 
+
         self.dict = []
         self.dict.append(self.dict_lvl01)
         self.dict.append(self.dict_lvl02)
         self.dict.append(self.dict_lvl03)
         self.dict.append(self.dict_lvl04)
+        self.dict.append(self.dict_lvl05)
+        self.dict.append(self.dict_lvl06)
+        self.dict.append(self.dict_lvl07)
+        self.dict.append(self.dict_lvl08)
+        self.dict.append(self.dict_lvl09)
+        self.dict.append(self.dict_lvl10)
+
 
         # self.current_word = randint(0, len(self.dict[level]) - 1)
         self.current_word = 0
