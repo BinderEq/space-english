@@ -218,11 +218,11 @@ while playGame:
         # Расчёты:
         # ...
 
-
-        # Уменьшаем топливо
-        # fuels.dec_fuel(deltatime)
-
         if not pause:
+
+            # Уменьшаем топливо
+            fuels.dec_fuel(deltatime)
+
             for i in range(len(rocket)):
                 rocket[i].move(deltatime, frame)
 
