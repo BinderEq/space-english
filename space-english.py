@@ -1,5 +1,6 @@
 # Подключаем pygame
 import pygame
+import setup
 
 from setup import *
 from model.ship import Ship
@@ -14,6 +15,7 @@ from random import randint
 from services.sound import Sound
 from view import View
 from model.heart import Heart
+from model.gas import Gas
 
 pygame.init()
 size = [WIDTH, HEIGHT]
@@ -43,7 +45,9 @@ pause = False
 
 meteor = []
 heart = []
+gas = []
 fuels = Fuels()
+
 
 explosions = []
 v = View('png/obloshka.png')
@@ -190,6 +194,16 @@ while playGame:
         for i in range(len(rocket)):
             rocket[i].draw(scene)
 
+        for i in range(len(gas)):
+            gas[i].draw(scene)
+            res = gas[i].is_collision_ship(ship)
+
+            if (res == True):
+                setup.fuel += 1000
+                if (setup.fuel > 1000):
+                    setup.fuel = 1000
+
+
         for i in range(len(explosions)):
             explosions[i].draw(scene, deltatime)
 
@@ -229,6 +243,9 @@ while playGame:
             for i in range(len(meteor)):
                 meteor[i].move(deltatime, HEIGHT)
 
+            for i in range(len(gas)):
+                gas[i].move(deltatime, HEIGHT)
+
             background01.move(deltatime, HEIGHT)
             background02.move(deltatime, HEIGHT)
 
@@ -237,6 +254,10 @@ while playGame:
             for i in range(len(rocket) - 1, -1, -1):
                 if rocket[i].enabled == False:
                     del rocket[i]
+
+            for i in range(len(gas) - 1, -1, -1):
+                if gas[i].enabled == False:
+                    del gas[i]
 
             for i in range(len(meteor) - 1, -1, -1):
                 if meteor[i].enabled == False:
@@ -256,6 +277,9 @@ while playGame:
             # if (randint(0, 100) < 20):
             if (randint(0, 100) < 20 and len(heart) == 0 and ship.frame > 0 and not pause):
                 heart.append(Heart(randint(0, WIDTH - 16), -40, sound))
+
+            if (randint(0, 100) < 10 and len(gas) == 0 and not pause):
+                gas.append(Gas(randint(0, WIDTH - 16), -40, sound))
 
     # Количество кадров
     frame += 1

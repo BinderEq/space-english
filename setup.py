@@ -10,7 +10,7 @@ BLACK = (0, 0, 0)
 
 level = 0
 fuel = 1000
-fuel_decrease_sec = 150
+fuel_decrease_sec = 25
 
 playGame = True    
 

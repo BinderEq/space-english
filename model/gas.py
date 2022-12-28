@@ -16,6 +16,7 @@ class Gas:
         self.skin = pygame.image.load("png/fuel.png")
         self.enabled = True
         self.frame = 0
+        self.snd = snd
 
     def move(self, delta, height):
         if setup.fuel > 0:
@@ -45,7 +46,6 @@ class Gas:
         c = (a ** 2 + b ** 2) ** 0.5
 
         if (c < 48 and self.enabled == True):
-            ship.inc_frame()
             self.enabled = False
             self.snd.play(Sound.BOOM)
             return True
