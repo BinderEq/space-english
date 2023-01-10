@@ -47,5 +47,5 @@ class Gas:
 
         if (c < 48 and self.enabled == True):
             self.enabled = False
-            self.snd.play(Sound.BOOM)
+            self.snd.play(Sound.GASF)
             return True
