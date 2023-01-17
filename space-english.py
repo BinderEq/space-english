@@ -22,7 +22,7 @@ size = [WIDTH, HEIGHT]
 
 pygame.display.set_caption("Space English")
 
-if (fullScreen):
+if fullScreen:
     WIDTH = pygame.display.Info().current_w
     HEIGHT = pygame.display.Info().current_h
     scene = pygame.display.set_mode(flags=pygame.FULLSCREEN)
@@ -68,6 +68,10 @@ while playGame:
                     state = PLAY_GAME
                     dict = Dict(level, sound)
                     sound.play(Sound.OKGO)
+                    pygame.mixer.music.stop()
+                    pygame.mixer.music.load('sound/music.mp3')
+                    pygame.mixer.music.set_volume(0.2)
+                    pygame.mixer.music.play()
         scene.fill(BLACK)
         v.draw(scene)
         pygame.display.flip()
@@ -272,14 +276,15 @@ while playGame:
                     del heart[i]
 
             if (randint(0, 100) < 30 and not pause):
-                meteor.append(Meteor(randint(0, WIDTH - 16), -40, font, dict.get_word(0), sound))
+                meteor.append(Meteor(randint(0, WIDTH - 32), -40, font, dict.get_word(0), sound))
 
             # if (randint(0, 100) < 20):
             if (randint(0, 100) < 20 and len(heart) == 0 and ship.frame > 0 and not pause):
-                heart.append(Heart(randint(0, WIDTH - 16), -40, sound))
+                heart.append(Heart(randint(0, WIDTH - 32), -40, sound))
 
             if (randint(0, 100) < 10 and len(gas) == 0 and not pause):
-                gas.append(Gas(randint(0, WIDTH - 16), -40, sound))
+                # gas.append(Gas(randint(0, WIDTH - 16), -40, sound))
+                gas.append(Gas(ship.x, -40, sound))
 
     # Количество кадров
     frame += 1

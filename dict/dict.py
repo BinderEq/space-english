@@ -1,4 +1,4 @@
-from random import randint
+import random
 from setup import *
 
 class Dict:
@@ -13,6 +13,7 @@ class Dict:
                      ["PEN", "РУЧКА"],
                      ["BED", "КРОВАТЬ"],
                      ["BAG", "СУМКА"]]
+        random.shuffle(self.dict_lvl01)
 
         self.dict_lvl02 = [["HOUSE", "ДОМ"],
                      ["WATER", "ВОДА"],

@@ -20,7 +20,7 @@ class Meteor:
 
         # Придумываем букву
         self.char = ""
-        if randint(0, 100) > 60:
+        if randint(0, 100) > 40:
             alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             self.char = alphabet[randint(0, len(alphabet) - 1)]
 
